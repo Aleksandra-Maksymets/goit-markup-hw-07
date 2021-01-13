@@ -1,0 +1,39 @@
+.what-we-do {
+  display: flex;
+}
+
+.what-we-do__item {
+  position: relative;
+
+  display: block;
+  width: calc((100% - 2 * 30px) / 3);
+}
+
+.what-we-do__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.what-we-do__thumb {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 370px;
+  min-height: 70px;
+
+  background-color: var(--advantages-lable-bg-color);
+}
+
+.what-we-do__lable {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-accent-color);
+}
