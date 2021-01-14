@@ -1,13 +1,14 @@
-.advantages__container {
-  display: flex;
+.advantages {
+  @include centered-flex(flex, center, center);
+  @extend %list;
 }
 
 .advantages__item {
   width: calc((100% - 3 * 30px) / 4);
-}
 
-.advantages__item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .advantages__title {
@@ -26,16 +27,14 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 .advantages__thumb {
-  display: flex;
-  background-color: var(--section-background-color);
+  @include centered-flex(flex, center, center);
+  background-color: $section-background-color;
   border-radius: 4px;
   margin-bottom: 30px;
   height: 120px;
-  justify-content: center;
-  align-items: center;
 }
 
 .advantages__icon {

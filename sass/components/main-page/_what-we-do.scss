@@ -1,5 +1,6 @@
 .what-we-do {
-  display: flex;
+  @include centered-flex(flex);
+  @extend %list;
 }
 
 .what-we-do__item {
@@ -19,14 +20,12 @@
   left: 0;
   right: 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centered-flex(flex, center, center);
 
   width: 370px;
   min-height: 70px;
 
-  background-color: var(--advantages-lable-bg-color);
+  background-color: $advantages-lable-bg-color;
 }
 
 .what-we-do__lable {
@@ -35,5 +34,5 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--secondary-accent-color);
+  color: $secondary-accent-color;
 }

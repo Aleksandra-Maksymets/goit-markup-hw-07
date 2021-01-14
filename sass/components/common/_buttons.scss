@@ -2,32 +2,33 @@
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 4px;
+
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 32px;
   padding-right: 32px;
-  min-width: 200px;
-  text-align: center;
 
+  min-width: 200px;
+  height: 50px;
+
+  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
 
-  color: var(--secondary-accent-color);
-  background-color: var(--primary-accent-color);
+  color: $secondary-accent-color;
+  background-color: $primary-accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition-property: background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include animation(background-color);
 
-.button:focus,
-.button:hover {
-  color: var(--primary-accent-color);
-  background-color: var(--secondary-accent-color);
-  cursor: pointer;
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    color: $primary-accent-color;
+    background-color: $secondary-accent-color;
+  }
 }
 
 .subscribe__button {
@@ -35,43 +36,63 @@
   justify-content: center;
   align-items: center;
 
-  min-width: 200px;
-  height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 28px;
   padding-right: 28px;
   margin-left: 12px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-
-  border: none;
-  border-radius: 4px;
-  color: var(--secondary-accent-color);
-  background-color: var(--primary-accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button:hover,
-.button:focus {
-  cursor: pointer;
-  color: var(--primary-accent-color);
-  background-color: var(--secondary-accent-color);
 }
 
 .icon-send {
   margin-left: 11px;
-  fill: var(--secondary-accent-color);
+  fill: $secondary-accent-color;
+
+  .button:hover &,
+  .button:focus & {
+    fill: $primary-accent-color;
+  }
 }
 
-.form .button:hover .icon-send,
-.form .button:focus .icon-send {
-  fill: var(--primary-accent-color);
+.form__button {
+  display: block;
+
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-right: 55px;
+  padding-left: 55px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.filter__button {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+  background-color: $section-background-color;
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  @include animation(color, background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $secondary-accent-color;
+    background-color: $primary-accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border: 1px solid $primary-accent-color;
+  }
 }

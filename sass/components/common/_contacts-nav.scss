@@ -1,6 +1,7 @@
 .contacts-nav {
-  display: flex;
   margin-left: auto;
+  display: flex;
+  @extend %list;
 }
 
 .contacts-nav__item:not(:last-child) {
@@ -17,18 +18,17 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
+  @include animation(color);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: $primary-accent-color;
+    cursor: pointer;
+  }
 }
 
-.icon-email {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
+.icon-email,
 .icon-phone {
   margin-right: 10px;
   fill: currentColor;

@@ -1,40 +1,50 @@
 // Colors
+
 // Main page
 
-$primary-text-color: #212121; //цвет основного текста
-$secondary-text-color: #757575; //цвет текста второстепенный
+//цвет основного текста
+$primary-text-color: #212121;
 
-$primary-accent-color: #2196f3; //цвет акцента
-$secondary-accent-color: #ffffff; // цвет акцента вторичный белый
+//цвет текста второстепенный
+$secondary-text-color: #757575;
 
-$logo-color: #000000; //цвет 2й части лого
+//цвет акцента
+$primary-accent-color: #2196f3;
 
-$primary-background-color: #ffffff; // основной фон
-$secondary-background-color: #2f303a; //цвет фона героя и футуре
-$section-background-color: #f5f4fa; //цвет фона секции Наша команда
+// цвет акцента вторичный белый
+$secondary-accent-color: #ffffff;
 
-$header-border-color: #ececec; // цвет нижнего разделителя хедера
-$icon-color: #afb1b8; // цвет неактивной иконки
-$footer-link-color: rgba(255, 255, 255, 0.6); // цвет ссылок контактов в футере
-$advantages-lable-bg-color: rgba(
-  47,
-  48,
-  58,
-  0.8
-); //оверлэй карточек секц. Наши преимущества
+//цвет 2й части лого
+$logo-color: #000000;
 
-$backdrop-background-color: rgba(
-  0,
-  0,
-  0,
-  0.2
-); //цвет фона бэкдропа при вызове формы
+// основной фон
+$primary-background-color: #ffffff;
+
+//цвет фона героя и футуре
+$secondary-background-color: #2f303a;
+
+//цвет фона секции Наша команда
+$section-background-color: #f5f4fa;
+
+// цвет нижнего разделителя хедера
+$header-border-color: #ececec;
+
+// цвет неактивной иконки
+$icon-color: #afb1b8;
+
+// цвет ссылок контактов в футере
+$footer-link-color: rgba(255, 255, 255, 0.6);
+
+//оверлэй карточек секц. Наши преимущества
+$advantages-lable-bg-color: rgba(47, 48, 58, 0.8);
+
+//цвет фона бэкдропа при вызове формы
+$backdrop-background-color: rgba(0, 0, 0, 0.2);
 
 // Portfolio
-$portfolio-card-border-color: #eeeeee; //цвет рамки карточки в Портфолио
-$card-overlay-color: rgba(
-  33,
-  150,
-  243,
-  0.9
-); //цвет оверлэя карточек портфолио при ховере
+
+//цвет рамки карточки в Портфолио
+$portfolio-card-border-color: #eeeeee;
+
+//цвет оверлэя карточек портфолио при ховере
+$card-overlay-color: rgba(33, 150, 243, 0.9);
