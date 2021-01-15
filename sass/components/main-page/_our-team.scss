@@ -30,18 +30,20 @@
 
 .team-member__name {
   margin-bottom: 10px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include typography(500, 16px, 1.19, 0.03em);
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 1.19;
+  // letter-spacing: 0.03em;
 }
 
 .team-member__position {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include typography(400, 16px, 1.19, 0.03em);
+  // font-weight: 400;
+  // font-size: 16px;
+  // line-height: 1.19;
+  // letter-spacing: 0.03em;
+
   margin-bottom: 16px;
 
   color: $secondary-text-color;

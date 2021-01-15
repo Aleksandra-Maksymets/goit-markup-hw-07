@@ -1,6 +1,6 @@
 .contacts-nav {
   margin-left: auto;
-  display: flex;
+  @include centered-flex(flex);
   @extend %list;
 }
 
@@ -10,16 +10,16 @@
 
 .contacts-nav__link {
   display: block;
-  display: flex;
-  align-items: center;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include centered-flex(flex, center);
+  @include typography(500, 14px, 1.14, 0.02em);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
 
   color: $secondary-text-color;
-  @include animation(color);
+
+  @extend %animation-color;
 
   &:focus,
   &:hover {

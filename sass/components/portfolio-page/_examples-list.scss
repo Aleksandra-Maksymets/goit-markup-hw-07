@@ -20,16 +20,13 @@
 
 .work-example__link {
   display: block;
-  @include animation(box-shadow);
-  //   transition-property: box-shadow;
-  //   transition-duration: 250ms;
-  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @extend %animation-box-shadow;
 
-.work-example__link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
 }
 
 .work-example__info {
@@ -45,29 +42,29 @@
 
 .work-example__title {
   margin-bottom: 4px;
-
   text-align: left;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include typography(700, 18px, 2, 0.06em);
+  // font-weight: 700;
+  // font-size: 18px;
+  // line-height: 2;
+  // letter-spacing: 0.06em;
 
   color: $primary-text-color;
 }
 
 .work-example__type {
   text-align: left;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
+  @include typography(400, 16px, 1.88, 0.03em);
+  // font-weight: 400;
+  // font-size: 16px;
+  // line-height: 1.88;
+  // letter-spacing: 0.03em;
 
   color: $secondary-text-color;
 }
 
 .work-example__pop-up-thumb {
   position: relative;
-
   overflow: hidden;
 }
 
@@ -81,14 +78,9 @@
   background-color: $card-overlay-color;
 
   opacity: 0;
-
   transform: translateY(100%);
 
-  @include animation(opacity, transform);
-
-  // transition-property: opacity, transform;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-opacity-transform;
 }
 
 .work-example__pop-up-descr {
@@ -98,6 +90,8 @@
   padding-bottom: 63px;
   padding-right: 24px;
   padding-left: 24px;
+
+  @include typography(400, 18px, 1.56, 0.03em);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -106,13 +100,9 @@
   color: $secondary-accent-color;
 
   opacity: 0;
-
   transform: translateY(100%);
 
-  @include animation(opacity, transform);
-  // transition-property: opacity, transform;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %animation-opacity-transform;
 }
 
 .work-example__link:hover .work-example__pop-up-thumb::before,

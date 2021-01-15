@@ -1,17 +1,12 @@
-@mixin animation(
-  $property1: color,
-  $property2: all,
-  $property3: all,
-  $property4: all
-) {
-  transition: $property1 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: $property2 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: $property3 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: $property4 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@mixin centered-flex($type: flex, $Y: unset, $X: unset) {
+@mixin centered-flex($type, $Y: unset, $X: unset) {
   display: $type;
   align-items: $Y;
   justify-content: $X;
+}
+
+@mixin typography($weight, $size, $height, $spaing) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spaing;
 }
